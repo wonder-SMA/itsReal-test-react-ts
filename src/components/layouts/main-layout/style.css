@@ -1,0 +1,33 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	position: relative;
+	font-family: sans-serif;
+}
+
+/* Страница */
+.layout {
+	max-width: 1024px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	margin: 0 auto;
+	background: #FFFFFF;
+}
+
+.content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
