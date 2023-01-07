@@ -6,19 +6,21 @@ function bracketCount(string) {
   };
 
   for (let i = 0; i < string.length; i++) {
-    if (string[i] === '(' || string[i] === '[' || string[i] === '{') {
-      stack.push(string[i]);
+    const char = string[i];
+
+    if (char === '(' || char === '[' || char === '{') {
+      stack.push(char);
       continue;
-    } else if (string[i] !== ')' && string[i] !== ']' && string[i] !== '}') {
+    } else if (char !== ')' && char !== ']' && char !== '}') {
       continue;
     }
 
     const bracket = stack.pop();
 
     if (
-      (bracket === '(' && string[i] === ')') ||
-      (bracket === '[' && string[i] === ']') ||
-      (bracket === '{' && string[i] === '}')
+      (bracket === '(' && char === ')') ||
+      (bracket === '[' && char === ']') ||
+      (bracket === '{' && char === '}')
     ) {
       result.right += 2;
       continue;
